@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+				<link rel="stylesheet" type="text/css" href="css/nicai.css"/>
+		<script src="swiper-3.4.2.min.js"></script>
+		<script src="jquery-3.1.1.js"></script>
+	</head>
+<div class="header">
+	<img src="img/tou.png"/>
+</div>
+
+	<div class="nav ">
+		<div class="nav1">
+		<ul class="tou">
+			<li>小米商场</li><li>|</li>
+			<li >MIUI</li><li>|</li>
+			<li >米聊</li><li>|</li>
+			<li>游戏</li><li>|</li>
+			<li >多看阅读</li><li>|</li>
+			<l>云服务</li><li>|</li>
+			<li >金融</li><li>|</li>
+			<li>小米商城移动版</li><li>|</li>
+			<li >问题反馈</li><li>|</li>
+			<li>SelectRegion</li>
+		</ul>
+			<ul class="tou1">
+			<li><img src="img/购物车.png"/></li>
+			<li>消息通知</li><li>|</li>
+			<li>注册</li><li>|</li>
+			<li>登录</li>
+		</ul>
+		</div>
+	</div>
+	
+	
+	
+	<div  class="subnav">
+		<ul class="subnav2">
+			<li><img src="img/小米.png"/></li>
+			<li><img src="img/手机.png"/></li>
+				<li class="a">小米手机</li>
+				<li class="a">红米</li>
+				<li class="a">平板.笔记本</li>
+				<li class="a">电视</li>
+				<li class="a">盒子·影音</li>
+				<li class="a">路由器</li>
+				<li class="a">智能硬件</li>
+				<li>服务</li>
+				<li>社区</li>
+		</ul>
+		<ul class="subnav3">
+			<li><input type="text" name="" id="" value="" /><button>?</button></li>
+		</ul>
+	</div>
+	
+	
+
+<script>  
+
+$('.a').click(function(){  
+    $('center').removeClass('opacity');  
+    $('.keng-de').fadeToggle();  
+});  
+$('.keng-de').mousedown(function(event){     
+    var offset=$(this).offset();     
+    $(this).css('cursor','move'); 
+    $(this).mousemove(function(event){         
+    });  
+    $(this).mouseup(function(event){   
+     $(this).unbind("mousemove").css('cursor','');
+   });   
+});   
+</script> 
+
+<hr  style="width: 100%;background: #FFFFFF;border: #FFFFFF;"/>
+	<div class="keng-de">
+		<img src="img/keng-jushini.png"/>
+	</div>
+<div id="side">
+	<ul class="sideBar" >
+		<li><a class="b">手机 电话卡</a><span>></span></li>
+		<li><a class="b">笔记本  平板</a><span>></span></li>
+		<li><a class="b">电视  盒子</a><span>></span></li>
+		<li><a class="b">路由器 智能硬件</a><span>></span></li>
+		<li><a class="b">移动电源 电池 插线板</a><span>></span></li>
+		<li><a class="b">耳机  音响</a><span>></span></li>
+		<li><a class="b">保护套  贴膜</a><span>></span></li>
+		<li><a class="b">线材 支架 粗存卡</a><span>></span></li>
+		<li><a class="b">箱包服饰 鞋 眼睛</a><span>></span></li>
+		<li><a class="b">米兔 生化周边</a><span>></span></li>
+	</ul>
+	<div class="lunboli">
+		<img src="img/a.png"/>
+	</div>
+<script>  
+
+$('.b').click(function(){  
+    $('center').removeClass('opacity');  
+    $('.lunboli').fadeToggle();  
+});  
+$('.lunboli').mousedown(function(event){     
+    var offset=$(this).offset();     
+    $(this).css('cursor','move'); 
+    $(this).mousemove(function(event){         
+    });  
+    $(this).mouseup(function(event){   
+     $(this).unbind("mousemove").css('cursor','');
+   });   
+});   
+</script> 
+
+	<div class="cont">
+    <ul>
+        <li><img src="img/lunbo.png"/></li>
+        <li><img src="img/lunbo.png"/></li>
+        <li><img src="img/lunbo.png"/></li>
+        <li><img src="img/lunbo.png"/></li>
+        <li><img src="img/lunbo.png"/></li>
+    </ul>
+    <div>
+        <ul id="ul1">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    var index = 0;
+    var time = null;
+    init();
+    function init(){
+        time = setInterval(function(){
+            index++;
+            if(index>4){
+                index = 0;
+            }
+            showPic (index);
+            bgColor (index);
+        },2000);
+    }
+    $("#ul1 li").on("click",function(){
+        clearInterval(time);
+        index = $(this).index();
+        showPic (index);
+        bgColor (index);
+    });
+    function bgColor (index) {
+        $("#ul1 li").css("background-color","black").eq(index).css("background-color","red");
+    }
+    function showPic (index) {
+        var picWidth = $(".cont").width();
+        $(".cont>ul").stop(true).animate({
+              "left":-index*picWidth
+            "left":-(index*600)+"px"
+        },500);
+    }
+</script>
+
+<div class="tutu">
+	<div>
+		<ul>
+			<li>
+				<img src="img/a1.png"/>
+				<p>选购手机</p>
+			</li>
+			<li>
+				<img src="img/a2.png"/>
+				<p>选购手机</p>
+			</li>
+			<li>
+				<img src="img/a3.png"/>
+				<p>选购手机</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<img src="img/a4.png"/>
+				<p>选购手机</p>
+			</li>
+			<li>
+				<img src="img/a5.png"/>
+				<p>选购手机</p>
+			</li>
+			<li>
+				<img src="img/a6.png"/>
+				<p>选购手机</p>
+			</li>
+		</ul>
+	</div>
+	<div><img src="img/b1.png"/></div>
+	<div><img src="img/b2.png"/></div>
+	<div><img src="img/b3.png"/></div>
+</div>
+
+
+<ul id="xiaomi">
+	<li>小米精选单品</li>
+</ul>
+
+<div id="">
+	<ul class="xiaomikeng">
+		<li><img src="img/c1.png"/>
+			<h4>红米noto 4X</h4>
+			<p>4100mAh超长续航，多彩金属</p>
+			<div>999元起</div>
+		</li>
+		<li><img src="img/c1.png"/>
+			<h4>红米noto 4X</h4>
+			<p>4100mAh超长续航，多彩金属</p>
+			<div>999元起</div>
+		</li>
+		<li><img src="img/c1.png"/>
+			<h4>红米noto 4X</h4>
+			<p>4100mAh超长续航，多彩金属</p>
+			<div>999元起</div>
+		</li>
+		<li><img src="img/c1.png"/>
+			<h4>红米noto 4X</h4>
+			<p>4100mAh超长续航，多彩金属</p>
+			<div>999元起</div>
+		</li>
+		<li><img src="img/c1.png"/>
+			<h4>红米noto 4X</h4>
+			<p>4100mAh超长续航，多彩金属</p>
+			<div>999元起</div>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="zhong">
+		<hr  style="width: 100%;height: 30px; background:#F5F5F5;border: #F5F5F5;"/>
+	<ul class="tibiao">
+		<li>
+			<div>
+				家电
+			</div>
+		</li>
+		<li>
+				<a href="#">热门</a>
+				<span>电视影视</span>
+				<span>电视影视</span>
+				<span>电视影视</span>
+		</li>
+	</ul>
+	
+	<ul class="zhong1">
+		<li><img src="img/images_38.jpg"/></li>
+		<li>
+			<ul>
+				<li>
+					<img src="img/images_40.jpg"/>
+					<h4>小米电视4A 49英寸</h4>
+					<p>7.7-7.31  值降300</p>
+					<span>2999元</span>
+				</li>
+				<li>
+					<img src="img/images_40.jpg"/>
+					<h4>小米电视4A 49英寸</h4>
+					<p>7.7-7.31  值降300</p>
+					<span>2999元</span>
+				</li>
+				<li>
+					<img src="img/images_40.jpg"/>
+					<h4>小米电视4A 49英寸</h4>
+					<p>7.7-7.31  值降300</p>
+					<span>2999元</span>
+				</li>
+				<li>
+					<img src="img/images_40.jpg"/>
+					<h4>小米电视4A 49英寸</h4>
+					<p>7.7-7.31  值降300</p>
+					<span>2999元</span>
+				</li>
+			</ul>
+			<ul class="zhongaa">
+				<li>
+					<img src="img/images_40.jpg"/>
+					<h4>小米电视4A 49英寸</h4>
+					<p>7.7-7.31  值降300</p>
+					<span>2999元</span>
+				</li>
+				<li>
+					<img src="img/images_40.jpg"/>
+					<h4>小米电视4A 49英寸</h4>
+					<p>7.7-7.31  值降300</p>
+					<span>2999元</span>
+				</li>
+				<li>
+					<img src="img/images_40.jpg"/>
+					<h4>小米电视4A 49英寸</h4>
+					<p>7.7-7.31  值降300</p>
+					<span>2999元</span>
+				</li>
+				<li>
+					<img src="img/images_40.jpg"/>
+					<h4>小米电视4A 49英寸</h4>
+					<p>7.7-7.31  值降300</p>
+					<span>2999元</span>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<hr  style="width: 100%;height: 10px; background:#F5F5F5;border: #F5F5F5;"/>
+		<ul class="tibiao">
+		<li>
+			<div>
+				只能
+			</div>
+		</li>
+		<li>
+				<a href="#">热门</a>
+				<span>出行</span>
+				<span>出行</span>
+				<span>出行</span>
+	
+		</li>
+	</ul>
+
+	<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+		<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+		<hr  style="width: 100%;height: 10px; background:#F5F5F5;border: #F5F5F5;"/>
+		<ul class="tibiao">
+		<li>
+			<div>
+				搭配
+			</div>
+		</li>
+		<li>
+				<a href="#">热门</a>
+				<span>出行</span>
+				<span>出行</span>
+				<span>出行</span>
+	
+		</li>
+	</ul>
+
+	<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+		<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+	
+		<hr  style="width: 100%;height: 10px; background:#F5F5F5;border: #F5F5F5;"/>
+		<ul class="tibiao">
+		<li>
+			<div>
+				配件
+			</div>
+		</li>
+		<li>
+				<a href="#">热门</a>
+				<span>出行</span>
+				<span>出行</span>
+				<span>出行</span>
+	
+		</li>
+	</ul>
+
+	<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+		<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+	
+		<hr  style="width: 100%;height: 10px; background:#F5F5F5;border: #F5F5F5;"/>
+		<ul class="tibiao">
+		<li>
+			<div>
+				周边
+			</div>
+		</li>
+		<li>
+				<a href="#">热门</a>
+				<span>出行</span>
+				<span>出行</span>
+				<span>出行</span>
+	
+		</li>
+	</ul>
+
+	<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+		<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+	
+	
+		<hr  style="width: 100%;height: 10px; background:#F5F5F5;border: #F5F5F5;"/>
+		<ul class="tibiao">
+		<li>
+			<div>
+				为你推荐
+			</div>
+		</li>
+		<li>
+				<span id="">
+					<img src="img/jjjjjjj.png"/>
+				</span>
+		</li>
+	</ul>
+
+	<ul class="zhongfeng">
+		<li><img src="img/images_65.jpg"/></li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+		<li>
+			<img src="img/images_67.jpg"/>
+			<h4>小米体质平</h4>
+			<p>简约钱包  隐藏是 LED显示屏</p>
+			<span>199元</span>
+		</li>
+	</ul>
+		<hr  style="width: 100%;height: 10px; background:#F5F5F5;border: #F5F5F5;"/>
+		
+		
+	<ul class="zhong3">
+		<li>
+			<img src="img/img_03.jpg"/>
+			<p>超级喜欢！小巧玲珑！情之完美！不如道为什么！只要是
+			小米出来的东西都喜欢！拿到是因为那一句？？较密为发。。</p>
+			<div>来自于捡钱的评价</div>
+			<span>小米复审蓝牙请向</span><span>69元</span>
+		</li>
+		<li>
+			<img src="img/img_03.jpg"/>
+			<p>超级喜欢！小巧玲珑！情之完美！不如道为什么！只要是
+			小米出来的东西都喜欢！拿到是因为那一句？？较密为发。。</p>
+			<div>来自于捡钱的评价</div>
+			<span>小米复审蓝牙请向</span><span>69元</span>
+		</li>
+		<li>
+			<img src="img/img_03.jpg"/>
+			<p>超级喜欢！小巧玲珑！情之完美！不如道为什么！只要是
+			小米出来的东西都喜欢！拿到是因为那一句？？较密为发。。</p>
+			<div>来自于捡钱的评价</div>
+			<span>小米复审蓝牙请向</span><span>69元</span>
+		</li>
+		<li>
+			<img src="img/img_03.jpg"/>
+			<p>超级喜欢！小巧玲珑！情之完美！不如道为什么！只要是
+			小米出来的东西都喜欢！拿到是因为那一句？？较密为发。。</p>
+			<div>来自于捡钱的评价</div>
+			<span>小米复审蓝牙请向</span><span>69元</span>
+		</li>
+	</ul>	
+		<hr  style="width: 100%;height: 10px; background:#F5F5F5;border: #F5F5F5;"/>
+		
+			<ul class="tibiao">
+		<li>
+			<div>
+				视频
+			</div>
+		</li>
+		<li>
+				<span id="">
+					查看全部
+				</span>
+		</li>
+	</ul>	
+			<ul class="zhong4">
+		<li>
+			<img src="img/img_31.jpg"/>
+			<p>超级喜欢！小巧玲珑！情之完美！不如道为什么</p>
+			<div>来自于捡钱的评价</div>
+			
+		</li>
+		<li>
+		<img src="img/img_31.jpg"/>
+			<p>超级喜欢！小巧玲珑！情之完美！不如道为什么</p>
+			<div>来自于捡钱的评价</div>
+	
+		</li>
+		<li>
+			<img src="img/img_31.jpg"/>
+			<p>超级喜欢！小巧玲珑！情之完美！不如道为什么。</p>
+			<div>来自于捡钱的评价</div>
+
+		</li>
+		<li>
+				<img src="img/img_31.jpg"/>
+			<p>超级喜欢！小巧玲珑！情之完美！不如道为什么。</p>
+			<div>来自于捡钱的评价</div>
+	
+		</li>
+	</ul>	
+	<div class="tre">
+			<ul class="map">
+				<li>123231213</li>
+				<li>213131231</li>
+				<li>312321312</li>
+				<li>213213123</li>
+				<li id="lestq">6546546456</li>
+			</ul>
+			<div class="zhk">
+				<ul class="uol">
+					<li>
+						<p class="bold">aaaaaaa</p>
+						<p>aaaaaaaa</p>
+						<p>aaaaaaaa</p>
+						<p>aaaaaaaa</p>
+					</li>
+					<li>
+						<p class="bold">bbbbbbbb</p>
+						<p>bbbbbbbb</p>
+						<p>bbbbbbbb</p>
+							<p>bbbbbbbb</p>
+					</li>
+					<li>
+						<p class="bold">ccccccc</p>
+						<p>cccccccc</p>
+						<p>cccccccc</p>
+						<p>cccccccc</p>
+					</li>
+					<li>
+						<p class="bold">dddddddd</p>
+						<p>dddddddd</p>
+						<p>dddddddd</p>
+						<p>dddddddd</p>
+					</li>
+					<li>
+						<p class="bold">eeeeeeee</p>
+						<p>eeeeeee</p>
+						<p>eeeeeee</p>
+						<p>eeeeeee</p>
+					</li>
+					<li>
+						<p class="bold">fffffffffff</p>
+						<p>ffffffffff</p>
+						<p>ffffffffff</p>
+						<p>ffffffffff</p>
+					</li>
+				</ul>
+				<div class="rigy">
+					<p>小米客服</p>
+					<span>7*24小时全天</span><br />
+					<span>为您决绝问题</span>
+					<div> 立即开始咨询</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="cao">
+			<div class="img_9">
+				<img src="img/小米.png"/>
+			</div>
+			<div class="zjok">
+				<p>
+					<a href="#">小米商城</a> | <a href="#"> 小米商城 </a> | <a href="#">小米商城 </a> | <a href="#">小米商城 </a> | <a href="#">小米商城</a> | <a href="#">小米商城</a> | <a href="#">小米商城 </a> | <a href="#"> 小米商城</a> | <a href="#"> 小米商城 </a> | <a href="#">小米商城 </a> | <a href="#"> 小米商城 </a> 
+				</p>
+						<p>两款手机的福利国家士大夫；高考加分山东老家；看；就；劳动纠纷的辣椒粉；大家发空间打开了；放假了就</p>
+				<p>两款手机的福利国家士大夫；高考加分山东老家；看；就；劳动纠纷的辣椒粉；大家发空间打开了；放假了就</p>
+			</div>
+			
+			<ul class="zuih">
+				<li><img src="img/a1.png"/></li>
+	<li><img src="img/a1.png"/></li>
+	<li><img src="img/a1.png"/></li>
+	<li><img src="img/a1.png"/></li>
+			</ul>
+		</div>
+			
+			
+		<p class="p_zu">
+			15151151515151515515
+		</p>
+		</div>	
+</div>
+	</body>
+</html>
